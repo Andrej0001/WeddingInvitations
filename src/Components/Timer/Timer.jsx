@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
+import "./timer.css";
 
 function rozdilCasu(zadanyCas) {
   let aktualniCas = new Date();
@@ -19,12 +20,15 @@ function rozdilCasu(zadanyCas) {
 }
 
 const Timer = () => {
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState({
+    day: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   const currentWeddingDay = new Date(2023, 8, 30, 17, 0, 0);
-  console.log(currentWeddingDay);
 
-  console.log(date);
   useEffect(() => {
     let timer = setInterval(() => setDate(rozdilCasu(currentWeddingDay)), 1000);
     return function cleanup() {
@@ -41,21 +45,36 @@ const Timer = () => {
         alignItems: "center",
       }}
     >
-      <Box>
-        <Typography sx={{ fontSize: "10px" }}>DNU</Typography>
-        <Box>{date.day}</Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItem: "center",
+        }}
+      >
+        <div className="counter">{date.day}</div>
+        <Typography sx={{ fontSize: "8px", textAlign: "center" }}>
+          {date.day <= 4 ? "ДНЯ" : "ДНІВ"}
+        </Typography>
       </Box>
       <Box>
-        <Typography sx={{ fontSize: "10px" }}>HODIN</Typography>{" "}
-        <Box>{date.hours}</Box>
+        <div className="counter">{date.hours}</div>
+        <Typography sx={{ fontSize: "8px", textAlign: "center" }}>
+          {date.hours <= 4 ? "ГОДИНИ" : "ГОДИН"}
+        </Typography>{" "}
       </Box>
       <Box>
-        <Typography sx={{ fontSize: "10px" }}>MINUT</Typography>{" "}
-        <Box>{date.minutes}</Box>
+        <div className="counter">{date.minutes}</div>
+        <Typography sx={{ fontSize: "8px", textAlign: "center" }}>
+          {date.minutes <= 4 ? "МИНУТИ" : "МИНУТ"}
+        </Typography>{" "}
       </Box>
       <Box>
-        <Typography sx={{ fontSize: "10px" }}>SEKUND</Typography>{" "}
-        <Box>{date.seconds}</Box>
+        <div className="counter">{date.seconds}</div>
+        <Typography sx={{ fontSize: "8px", textAlign: "center" }}>
+          {date.seconds <= 4 ? "СЕКУНДИ" : "СЕКУНД"}
+        </Typography>{" "}
       </Box>
     </Box>
   );

@@ -1,0 +1,42 @@
+.main-date-style {
+  font-size: small-caps bold 24px/1 sans-serif;
+  color: dimgrey;
+  display: flex;
+  align-items: center;
+  /* gap: 20px; */
+  padding: 10px;
+  padding-bottom: 10px !important;
+  justify-content: center;
+}
+
+.day,
+.mouns {
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+.date {
+  font-size: 30px;
+}
+
+.vetical-line {
+  border: 1px solid dimgrey;
+  width: 30px;
+  transform: rotate(90deg);
+}
+@media (max-width: 800px) {
+  .day,
+  .mouns {
+    letter-spacing: 5px;
+    font-size: 9px;
+    text-align: center;
+  }
+  .date {
+    font-size: 30px;
+  }
+  .vetical-line {
+    width: 30px;
+  }
+  .main-date-style {
+    padding-bottom: 10px !important;
+  }
+}
