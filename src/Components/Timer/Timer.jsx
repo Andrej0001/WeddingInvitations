@@ -27,7 +27,7 @@ const Timer = () => {
     seconds: 0,
   });
 
-  const currentWeddingDay = new Date(2023, 8, 30, 17, 0, 0);
+  const currentWeddingDay = new Date(2023, 8, 30, 0, 0, 0);
 
   useEffect(() => {
     let timer = setInterval(() => setDate(rozdilCasu(currentWeddingDay)), 1000);
@@ -61,7 +61,7 @@ const Timer = () => {
       <Box>
         <div className="counter">{date.hours}</div>
         <Typography sx={{ fontSize: "8px", textAlign: "center" }}>
-          {date.hours <= 4 ? "ГОДИНИ" : "ГОДИН"}
+          {date.hours <= 4 && date.hours !== 0 ? "ГОДИНИ" : "ГОДИН"}
         </Typography>{" "}
       </Box>
       <Box>

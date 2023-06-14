@@ -17,6 +17,13 @@
 .date {
   font-size: 30px;
 }
+.date:hover {
+  transform: scale(1.4);
+
+  color: black;
+
+  transition: 500ms;
+}
 
 .vetical-line {
   border: 1px solid dimgrey;
