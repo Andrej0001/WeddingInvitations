@@ -1,0 +1,6 @@
+.mapping {
+  width: 400px;
+  position: absolute;
+  top: 200px;
+  transform: translate(-50%, -50%);
+}

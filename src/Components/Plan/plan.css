@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Mark-Script";
+  src: url("../../Fonts/Marck_Script/MarckScript-Regular.ttf")
+    format("truetype");
+  font-weight: 800;
+}
+
+.vertical-line {
+  position: absolute;
+  border: 1px solid black;
+  transform: rotate(90deg);
+  top: 400px;
+  right: -111.5%;
+  width: 600px;
+}
+
+.pshoto-icon img,
+.first-icon img,
+.second-icon img,
+.third-icon img,
+.fourth-icon img {
+  width: 120px;
+}
+
+.pshoto-icon {
+  position: absolute;
+  top: 60px;
+  right: 60%;
+}
+.first-icon {
+  position: absolute;
+  left: 60%;
+  top: 190px;
+}
+.second-icon {
+  position: absolute;
+  right: 60%;
+  top: 310px;
+}
+.third-icon {
+  position: absolute;
+  left: 60%;
+  top: 410px;
+}
+.fourth-icon {
+  position: absolute;
+  right: 60%;
+  top: 550px;
+}
+
+.rigth-dot {
+  position: absolute;
+  left: 106%;
+  bottom: 70px;
+}
+
+.left-dot {
+  position: absolute;
+  right: 112%;
+  bottom: 70px;
+}
+
+.title-plan {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  color: dimgrey;
+}
+
+.title-plan-time {
+  text-align: center;
+  color: dimgrey;
+  font-size: 20px;
+}

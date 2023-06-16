@@ -31,4 +31,19 @@
 .footer-title-guest {
   /* padding: 20px 0px; */
   font-weight: 600;
+  padding-bottom: 30px;
+}
+
+.image-calendar img {
+  width: 230px;
+}
+
+.heart-icon img {
+  width: 40px;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 95.5%;
+  right: 15.5%;
 }

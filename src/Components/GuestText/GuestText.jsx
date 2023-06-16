@@ -1,5 +1,7 @@
 import React from "react";
+import calendar from "../../assets/Calendar.png";
 import "./guest-text.css";
+import heartIcon from "../../assets/Vector.png";
 
 const GuestText = () => {
   return (
@@ -14,6 +16,12 @@ const GuestText = () => {
       </div>
       <div className="footer-title-guest">
         {"чекаємо вас ан нашому весіллі м 17:00".toUpperCase()}
+      </div>
+      <div className="image-calendar">
+        <img src={calendar} alt="calendar"></img>
+      </div>
+      <div className="heart-icon">
+        <img src={heartIcon} alt="heartIcon"></img>
       </div>
     </div>
   );

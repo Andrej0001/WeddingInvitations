@@ -43,6 +43,7 @@ const Timer = () => {
         gap: "20px",
         justifyContent: "center",
         alignItems: "center",
+        paddingTop: "20px",
       }}
     >
       <Box
