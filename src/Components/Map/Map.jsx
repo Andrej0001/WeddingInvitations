@@ -1,24 +1,37 @@
-import React, { useMemo } from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import React, { useState } from "react";
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
+import "./map.css";
+
 const Map = () => {
+  const [mapLoading, setMapLoading] = useState();
+
   const containerStyle = {
     width: "500px",
     height: "400px",
   };
 
-  const center = {
-    lat: 50.0755, // Latitude pro Prahu
-    lng: 14.4378,
-  };
   const markerPosition = {
-    lat: 50.089431, // Latitude pro polohu špendlíku
-    lng: 14.12318, // Longitude pro polohu špendlíku
+    address: "Gattino,Řešovská 515,181 00 ,Praha 8-Bohnice,Česko",
+    lat: 50.131163, // Latitude pro polohu špendlíku
+    lng: 14.409497, // Longitude pro polohu špendlíku
   };
 
-  // const { isLoaded } = useLoadScript({
-  //   googleMapsApiKey: "AIzaSyAJUlFqMDmaBex_FZV1CQdgxzrQxsl61Z4",
-  // });
-  // const center = useMemo(() => ({ lat: 18.52043, lng: 73.856743 }), []);
+  const handleMapLoad = (map) => {
+    // Mapa byla úspěšně načtena, můžeme zobrazit špendlík
+    const marker = new window.google.maps.Marker({
+      position: markerPosition,
+      map: map,
+    });
+    console.log(marker);
+
+    setMapLoading(marker);
+  };
+
   return (
     <div>
       <div className="main-header-map">
@@ -28,20 +41,27 @@ const Map = () => {
           &laquo;
           {"GATTINO".toUpperCase()}
           &raquo;
+          {"Zhořelecká 514/2, 181 00 Praha 8".toUpperCase()}
         </div>
+      </div>
 
-        <div className="mapping">
-          <LoadScript googleMapsApiKey="AIzaSyAJUlFqMDmaBex_FZV1CQdgxzrQxsl61Z4">
-            <GoogleMap
-              mapContainerStyle={containerStyle}
-              center={markerPosition}
-              zoom={10}
-            >
-              {/* <Marker position={center} /> */}
-              <Marker position={markerPosition} />
-            </GoogleMap>
-          </LoadScript>
-        </div>
+      <div className="mapping">
+        <LoadScript googleMapsApiKey="AIzaSyAJUlFqMDmaBex_FZV1CQdgxzrQxsl61Z4">
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={markerPosition}
+            zoom={15}
+            onLoad={handleMapLoad}
+          >
+            {mapLoading && (
+              <Marker
+                position={markerPosition}
+                map={mapLoading.map}
+                Marker
+              ></Marker>
+            )}
+          </GoogleMap>
+        </LoadScript>
       </div>
     </div>
   );

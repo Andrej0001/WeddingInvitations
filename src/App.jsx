@@ -5,7 +5,7 @@ import Date from "./Components/Date/Date";
 import GuestText from "./Components/GuestText/GuestText";
 import Plan from "./Components/Plan/Plan";
 import Map from "./Components/Map/Map";
-
+import ThreeDObject from "./Components/TreeDObject/TreeDObject";
 function App() {
   return (
     <div className="main-app">
@@ -25,6 +25,9 @@ function App() {
       </div>
       <div className="map-component">
         <Map></Map>
+      </div>
+      <div className="3d-backgound">
+        <ThreeDObject></ThreeDObject>
       </div>
     </div>
   );
