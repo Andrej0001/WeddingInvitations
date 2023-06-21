@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import {
-  GoogleMap,
-  LoadScript,
-  Marker,
-  InfoWindow,
-} from "@react-google-maps/api";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import "./map.css";
 
 const Map = () => {
   const [mapLoading, setMapLoading] = useState();
 
   const containerStyle = {
-    width: "500px",
-    height: "400px",
+    width: "100%",
+    height: "100%",
   };
 
   const markerPosition = {
@@ -33,7 +28,7 @@ const Map = () => {
   };
 
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       <div className="main-header-map">
         <div className="title">Місце проведення</div>
         <div className="description">
