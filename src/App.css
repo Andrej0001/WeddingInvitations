@@ -16,6 +16,7 @@
   top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .name-title {
@@ -47,4 +48,31 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding-bottom: 40px;
+}
+
+.plume-bk-image img {
+  width: 200px;
+}
+
+.plume-bk-image {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  width: 20px;
+  height: 200px;
+  z-index: 1;
+  transform: translateX(-50%);
+  animation: fallingPen 10s ease-in-out infinite;
+}
+
+@keyframes fallingPen {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(70%);
+  }
+  100% {
+    transform: translateY(130%);
+  }
 }

@@ -6,6 +6,7 @@ import GuestText from "./Components/GuestText/GuestText";
 import Plan from "./Components/Plan/Plan";
 import Map from "./Components/Map/Map";
 import FixedBackground from "./Loyaut/FixedBackground";
+import plumeIcon from "./assets/plumeOpaci.png";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         </div>
         <div className="map-component">
           <Map></Map>
+        </div>
+        <div className="plume-bk-image">
+          <img src={plumeIcon} alt="plume"></img>
         </div>
       </FixedBackground>
     </div>
