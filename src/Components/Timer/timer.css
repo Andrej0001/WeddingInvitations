@@ -3,3 +3,9 @@
   text-align: center;
   color: black;
 }
+
+@media screen and (min-width: 1440px) {
+  .our-name {
+    gap: 25px !important;
+  }
+}

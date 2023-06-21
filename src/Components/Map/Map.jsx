@@ -36,7 +36,7 @@ const Map = () => {
           &laquo;
           {"GATTINO".toUpperCase()}
           &raquo;
-          {"Zhořelecká 514/2, 181 00 Praha 8".toUpperCase()}
+          {" Zhořelecká 514/2, 181 00 Praha 8".toUpperCase()}
         </div>
       </div>
 

@@ -4,7 +4,7 @@ import "./date.css";
 const Date = () => {
   return (
     <div className="main-date-style">
-      <div className="day">СУББОТА</div>
+      <div className="day">СУБОТА</div>
       <div className="vetical-line"></div>
       <div className="date-and-year">
         <div className="date">30</div>

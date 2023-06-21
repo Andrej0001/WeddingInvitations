@@ -10,12 +10,14 @@ const GuestText = () => {
       <div className="description">
         {"ви отримали це посилання, а значить ми поспішаємо повідомити вам важливу новину!".toUpperCase()}
       </div>
-      <div className="title">Ми одружуємось !</div>
+      <div className="title" id="we-merried">
+        Ми одружуємось !
+      </div>
       <div className="description">
         {"і ми дуже хочемо поділити з вами це щасливе свято".toUpperCase()}
       </div>
       <div className="footer-title-guest">
-        {"чекаємо вас ан нашому весіллі м 17:00".toUpperCase()}
+        {"чекаємо вас на нашому весіллі о 17:00".toUpperCase()}
       </div>
       <div className="image-calendar">
         <img src={calendar} alt="calendar"></img>

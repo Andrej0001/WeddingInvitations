@@ -4,14 +4,25 @@
     format("truetype");
   font-weight: 800;
 }
+@font-face {
+  font-family: "Caveat";
+  src: url("../../Fonts/Caveat/Caveat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("../../Fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf")
+    format("truetype");
+  /* font-weight: 400; */
+}
 
 .vertical-line {
   position: absolute;
   border: 1px solid black;
   transform: rotate(90deg);
-  top: 400px;
-  right: -111.5%;
-  width: 600px;
+  top: 450px;
+  right: -99%;
+  width: 700px;
 }
 
 .pshoto-icon img,
@@ -24,39 +35,64 @@
 
 .pshoto-icon {
   position: absolute;
-  top: 60px;
+  top: 30px;
   right: 60%;
 }
+.pshoto-icon img {
+  height: 120px;
+}
+
+#first-image-dot {
+  top: 70px;
+}
+
 .first-icon {
   position: absolute;
-  left: 60%;
-  top: 190px;
+  left: 59%;
+  top: 145px;
+}
+.first-icon img {
+  width: 110px;
+}
+.second-icon img {
+  height: 130px;
 }
 .second-icon {
   position: absolute;
   right: 60%;
-  top: 310px;
+  top: 270px;
 }
 .third-icon {
   position: absolute;
-  left: 60%;
-  top: 410px;
+  left: 61.5%;
+  top: 430px;
+}
+.third-icon img {
+  height: 110px;
+  width: 140px;
 }
 .fourth-icon {
   position: absolute;
-  right: 60%;
+  right: 61%;
   top: 550px;
+}
+.fourth-icon img {
+  width: 140px;
+}
+
+#fourth-icon-dot {
+  top: 105px;
 }
 
 .rigth-dot {
   position: absolute;
-  left: 106%;
+  left: 107%;
   bottom: 70px;
 }
 
 .left-dot {
   position: absolute;
-  right: 112%;
+  right: 119%;
   bottom: 70px;
 }
 
@@ -71,4 +107,14 @@
   text-align: center;
   color: black;
   font-size: 20px;
+}
+
+.plan {
+  min-width: 230px;
+  white-space: nowrap;
+  font-family: "Cormorant", "Courier New", Courier, monospace;
+}
+
+.first-image {
+  position: relative;
 }

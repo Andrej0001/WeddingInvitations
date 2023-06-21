@@ -13,7 +13,7 @@
 
 .timer {
   position: absolute;
-  top: 45%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -43,7 +43,7 @@
 
   width: auto;
 
-  top: 2800px;
+  top: 3000px;
   left: 50%;
   transform: translate(-50%, -50%);
   padding-bottom: 40px;
