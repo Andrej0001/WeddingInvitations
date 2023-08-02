@@ -50,29 +50,106 @@
   padding-bottom: 40px;
 }
 
-.plume-bk-image img {
-  width: 200px;
+.plume-bk-image #plume-1 {
+  width: 180px;
+  height: 200px;
+  position: absolute;
+  top: -5vh;
+  left: 75%;
+  z-index: -1;
+  animation: animationPlume-1 160s linear 1s infinite;
+  transition-duration: 10s;
+}
+.plume-bk-image #plume-2 {
+  width: 180px;
+  height: 200px;
+  position: absolute;
+  position: absolute;
+  top: -17vh;
+  left: 0%;
+  z-index: -1;
+
+  animation: animationPlume-2 160s linear 20s infinite;
+}
+
+@media (max-width: 550px) {
+  .plume-bk-image #plume-1,
+  .plume-bk-image #plume-2 {
+    width: 80px;
+    height: 100px;
+  }
 }
 
 .plume-bk-image {
-  position: absolute;
-  top: -100px;
-  left: 50%;
-  width: 20px;
-  height: 200px;
-  z-index: 1;
-  transform: translateX(-50%);
-  animation: fallingPen 10s ease-in-out infinite;
+  position: relative;
+
+  width: 100vw;
+  height: 100%;
 }
 
-@keyframes fallingPen {
+@keyframes animationPlume-2 {
   0% {
-    transform: translateY(0%);
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  15% {
+    transform: translateY(50vh) translateX(100vw) rotate(-40deg);
+  }
+  30% {
+    transform: translateY(100vh) translateX(-20vw) rotate(40deg);
+  }
+  45% {
+    transform: translateY(150vh) translateX(100vw) rotate(-40deg);
   }
   50% {
-    transform: translateY(70%);
+    transform: translateY(200vh) translateX(-20vw) rotate(40deg);
+  }
+  65% {
+    transform: translateY(250vh) translateX(100vw) rotate(-40deg);
+  }
+  80% {
+    transform: translateY(300vh) translateX(-20vw) rotate(40deg);
   }
   100% {
-    transform: translateY(130%);
+    transform: translateY(400vh) translateX(100vw) rotate(-40deg);
+  }
+}
+@keyframes animationPlume-1 {
+  0% {
+    /* transition-duration: 10s; */
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  15% {
+    transform: translateY(50vh) translateX(-100vw) rotate(40deg);
+  }
+  30% {
+    transform: translateY(100vh) translateX(25vw) rotate(-40deg);
+  }
+  45% {
+    transform: translateY(150vh) translateX(-100vw) rotate(40deg);
+  }
+  50% {
+    transform: translateY(200vh) translateX(25vw) rotate(-40deg);
+  }
+  65% {
+    transform: translateY(250vh) translateX(-100vw) rotate(40deg);
+  }
+  80% {
+    transform: translateY(300vh) translateX(25vw) rotate(-40deg);
+  }
+  100% {
+    transform: translateY(400vh) translateX(-100vw) rotate(40deg);
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    transform: rotate(0deg);
+    transform-origin: center;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }

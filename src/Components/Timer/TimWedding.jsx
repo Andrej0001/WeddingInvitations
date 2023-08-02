@@ -1,5 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { forwardRef } from "react";
 import "./timer.css";
 
 function rozdilCasu(zadanyCas) {
@@ -19,7 +21,7 @@ function rozdilCasu(zadanyCas) {
   };
 }
 
-const Timer = () => {
+export const TimWedding = forwardRef(({ props }, ref) => {
   const [date, setDate] = useState({
     day: 0,
     hours: 0,
@@ -38,6 +40,7 @@ const Timer = () => {
 
   return (
     <Box
+      ref={ref}
       sx={{
         display: "flex",
         gap: "20px",
@@ -79,6 +82,6 @@ const Timer = () => {
       </Box>
     </Box>
   );
-};
+});
 
-export default Timer;
+export const MTimWedding = motion(TimWedding);

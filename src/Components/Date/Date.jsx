@@ -1,9 +1,11 @@
 import React from "react";
 import "./date.css";
+import { forwardRef } from "react";
+import { motion } from "framer-motion";
 
-const Date = () => {
+export const DateWedding = forwardRef(({ props }, ref) => {
   return (
-    <div className="main-date-style">
+    <div className="main-date-style" ref={ref}>
       <div className="day">СУБОТА</div>
       <div className="vetical-line"></div>
       <div className="date-and-year">
@@ -15,6 +17,6 @@ const Date = () => {
       <div className="mouns">ВЕРЕСЕНЬ</div>
     </div>
   );
-};
+});
 
-export default Date;
+export const MDateWedding = motion(DateWedding);
