@@ -24,12 +24,10 @@ export const Mapp = forwardRef(({ props }, ref) => {
   };
 
   const handleMapLoad = (map) => {
-    // Mapa byla úspěšně načtena, můžeme zobrazit špendlík
     const marker = new window.google.maps.Marker({
       position: markerPosition,
       map: map,
     });
-    // console.log(marker);
 
     setMapLoading(marker);
   };
