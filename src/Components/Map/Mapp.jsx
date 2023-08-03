@@ -1,8 +1,15 @@
 import React, { useState } from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
 import "./map.css";
+import { motion } from "framer-motion";
+import { forwardRef } from "react";
 
-const Map = () => {
+export const Mapp = forwardRef(({ props }, ref) => {
   const [mapLoading, setMapLoading] = useState();
 
   const containerStyle = {
@@ -11,9 +18,9 @@ const Map = () => {
   };
 
   const markerPosition = {
-    address: "Gattino,Řešovská 515,181 00 ,Praha 8-Bohnice,Česko",
-    lat: 50.131163, // Latitude pro polohu špendlíku
-    lng: 14.409497, // Longitude pro polohu špendlíku
+    address: "K Tržišti 14/4, 155 00 Řeporyje",
+    lat: 50.033361, // Latitude pro polohu špendlíku
+    lng: 14.312613, // Longitude pro polohu špendlíku
   };
 
   const handleMapLoad = (map) => {
@@ -22,21 +29,21 @@ const Map = () => {
       position: markerPosition,
       map: map,
     });
-    console.log(marker);
+    // console.log(marker);
 
     setMapLoading(marker);
   };
 
   return (
-    <div style={{ width: "100%" }}>
+    <div style={{ width: "100%" }} ref={ref}>
       <div className="main-header-map">
         <div className="title">Місце проведення</div>
         <div className="description">
-          {"банкетний зал ".toUpperCase()}
+          {" Restaurant ".toUpperCase()}
           &laquo;
-          {"GATTINO".toUpperCase()}
+          {"PREFUNDA".toUpperCase()}
           &raquo;
-          {" Zhořelecká 514/2, 181 00 Praha 8".toUpperCase()}
+          {" K Tržišti 14/4, 155 00 Řeporyje ".toUpperCase()}
         </div>
       </div>
 
@@ -45,7 +52,7 @@ const Map = () => {
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={markerPosition}
-            zoom={15}
+            zoom={17}
             onLoad={handleMapLoad}
           >
             {mapLoading && (
@@ -60,6 +67,6 @@ const Map = () => {
       </div>
     </div>
   );
-};
+});
 
-export default Map;
+export const MotionMap = motion(Mapp);

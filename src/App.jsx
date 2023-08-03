@@ -5,7 +5,7 @@ import { MDateWedding } from "./Components/Date/Date";
 import { MTimWedding } from "./Components/Timer/TimWedding";
 import GuestText from "./Components/GuestText/GuestText";
 import Plan from "./Components/Plan/Plan";
-import Map from "./Components/Map/Map";
+import { MotionMap } from "./Components/Map/Mapp";
 import FixedBackground from "./Loyaut/FixedBackground";
 import plumeIconRight from "./assets/plumeOpaciRight.png";
 import plumeIconLeft from "./assets/plumeOpaciLeft.png";
@@ -20,8 +20,18 @@ function App() {
     visible: (custom) => ({
       x: 0,
       opacity: 1,
-      transition: { delay: custom * 0.2, duration: 0.8 },
-
+      transition: { delay: custom * 0.2, duration: 2 },
+      transform: "scale(1)",
+    }),
+  };
+  const animationImage = {
+    hidden: {
+      transform: "scale(0.1)",
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      opacity: 1,
+      transition: { delay: custom * 0.2, duration: 1.5 },
       transform: "scale(1)",
     }),
   };
@@ -30,7 +40,7 @@ function App() {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.2, once: true }}
+      viewport={{ amount: 1, once: true }}
       className="app"
     >
       <FixedBackground>
@@ -48,23 +58,17 @@ function App() {
         <div className="plan-component">
           <Plan></Plan>
         </div>
-        <div className="map-component">
-          <Map></Map>
-        </div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          className="map-component"
+        >
+          <MotionMap variants={animationImage} custom={5}></MotionMap>
+        </motion.div>
         <div className="plume-bk-image">
-          <motion.img
-            // variants={animation}
-            src={plumeIconLeft}
-            alt="plume"
-            id="plume-2"
-          ></motion.img>
-          <motion.img
-            // variants={animation}
-            // custom={4}
-            src={plumeIconRight}
-            alt="plume"
-            id="plume-1"
-          ></motion.img>
+          <img src={plumeIconLeft} alt="plume" id="plume-2"></img>
+          <img src={plumeIconRight} alt="plume" id="plume-1"></img>
         </div>
       </FixedBackground>
     </motion.div>

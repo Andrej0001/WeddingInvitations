@@ -54,10 +54,10 @@
   width: 180px;
   height: 200px;
   position: absolute;
-  top: -17vh;
+  top: -23vh;
   left: 75%;
   z-index: -1;
-  animation: animationPlume-1 160s linear 1s infinite;
+  animation: animationPlume-1 200s linear 2s infinite;
   transition-duration: 10s;
 }
 .plume-bk-image #plume-2 {
@@ -65,11 +65,11 @@
   height: 200px;
   position: absolute;
   position: absolute;
-  top: -17vh;
+  top: -23vh;
   left: 0%;
   z-index: -1;
 
-  animation: animationPlume-2 160s linear 20s infinite;
+  animation: animationPlume-2 200s linear 20s infinite;
 }
 
 @media (max-width: 550px) {

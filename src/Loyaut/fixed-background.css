@@ -9,7 +9,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  overflow: auto;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 @media (min-width: 550px) {
