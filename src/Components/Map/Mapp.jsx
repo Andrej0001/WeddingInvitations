@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  GoogleMap,
-  LoadScript,
-  Marker,
-  InfoWindow,
-} from "@react-google-maps/api";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import "./map.css";
 import { motion } from "framer-motion";
 import { forwardRef } from "react";
