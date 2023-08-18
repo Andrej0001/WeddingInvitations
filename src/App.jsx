@@ -35,6 +35,22 @@ function App() {
       transform: "scale(1)",
     }),
   };
+  const animationIcon = {
+    hidden: {
+      y: -30,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      opacity: 0.5,
+      transition: {
+        delay: custom * 0.2,
+        duration: 0.8,
+        repeat: 3,
+        repeatType: "reverse",
+      },
+      y: 0,
+    }),
+  };
 
   return (
     <motion.div
@@ -51,6 +67,15 @@ function App() {
           </div>
           <MDateWedding variants={animation} custom={2}></MDateWedding>
           <MTimWedding variants={animation} custom={5}></MTimWedding>
+        </div>
+        <div className="icon-arrow">
+          <motion.i
+            variants={animationIcon}
+            initial="hidden"
+            animate="visible"
+            custom={6}
+            class="icon-with-shadow fas fa-chevron-down"
+          ></motion.i>
         </div>
         <div className="gues-component">
           <GuestText></GuestText>
