@@ -41,7 +41,7 @@ export const Mapp = forwardRef(({ props }, ref) => {
       </div>
 
       <div className="mapping">
-        <LoadScript googleMapsApiKey="AIzaSyAJUlFqMDmaBex_FZV1CQdgxzrQxsl61Z4">
+        <LoadScript googleMapsApiKey="AIzaSyCJYxP1M3tWLB_c98wD39RBulbd8St2d0w">
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={markerPosition}
