@@ -57,7 +57,7 @@ export const TimWedding = forwardRef(({ props }, ref) => {
           alignItem: "center",
         }}
       >
-        <div className="counter">{date.day}</div>
+        <div className="counter">0</div>
         <Typography
           sx={{ fontSize: "8px", textAlign: "center", padding: "0px 5px" }}
         >
@@ -65,7 +65,7 @@ export const TimWedding = forwardRef(({ props }, ref) => {
         </Typography>
       </Box>
       <Box>
-        <div className="counter">{date.hours}</div>
+        <div className="counter">0</div>
         <Typography
           sx={{ fontSize: "8px", textAlign: "center", padding: "0px 5px" }}
         >
@@ -73,7 +73,7 @@ export const TimWedding = forwardRef(({ props }, ref) => {
         </Typography>{" "}
       </Box>
       <Box>
-        <div className="counter">{date.minutes}</div>
+        <div className="counter">0</div>
         <Typography
           sx={{ fontSize: "8px", textAlign: "center", padding: "0px 5px" }}
         >
@@ -81,7 +81,7 @@ export const TimWedding = forwardRef(({ props }, ref) => {
         </Typography>{" "}
       </Box>
       <Box>
-        <div className="counter">{date.seconds}</div>
+        <div className="counter">0</div>
         <Typography
           sx={{ fontSize: "8px", textAlign: "center", padding: "0px 5px" }}
         >
